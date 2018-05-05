@@ -33,7 +33,7 @@ void PID::Init(double Kp, double Ki, double Kd, bool use_twiddle) {
     if (p == 0) {
       Dp.push_back(0.1);
     } else {
-      Dp.push_back(0.1 * p);
+      Dp.push_back(0.01 * p);
     }
   }
 //  Dp = {0.0198, 0.000324, 0.243};

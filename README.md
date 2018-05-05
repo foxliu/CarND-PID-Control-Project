@@ -1,6 +1,35 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
+## Overview
+
+The goal of this project to implement PID controller in C++.
+Two PID controllers were used, one to control the steering of the car and other one to control the throttle of the car
+
+## Parameter Tuning
+
+### The describe of the P, I, D
+* P -> Proportional
+  * P is proportional to CTE and inversely proportional to the target speed of the vehicle.
+  * A high proportional gain results in a large change in the output for a given change in the error.
+    If the proportional gain is too high, the system can become unstable.
+    In contrast, a small gain results in a small output response to a large input error, and a less responsive or less sensitive controller.
+    If the proportional gain is too low, the control action may be too small when responding to system disturbances.
+    Tuning theory and industrial practice indicate that the proportional term should contribute the bulk of the output change
+  * The higher the speed is, the lower the value of P is.
+* I -> Integral
+  * I is a summation of the errors cumulated along time.
+  * The integral term accelerates the movement of the process towards setpoint and eliminates the residual steady-state     error that occurs with a pure proportional controller. However, since the integral term responds to accumulated         errors from the past, it can cause the present value to overshoot the setpoint value.
+* D -> Derivative
+  * D is determined by the slope of error of time multiplied by the derivative coefficient.
+  * Derivative action predicts system behavior and thus improves settling time and stability of the system. 
+    Differential control can predict the future state of the vehicle and make advanced control.
+
+### Find the PID Coefficient Values
+* To determine the values of the PID coefficients that would make the car drive safely around the track, a combination of   manual tuning and the twiddle algorithm was used to minimize the mean squared cross-track error.
+  * First, set a target speed. The higher the speed, the lower the P value is.
+  * Then adjust the values ​​of P, I, D so that the vehicle can run steadily.
+  * Finally use twiddle to optimize, the need to pay attention to the optimization is that the faster the target speed,     Dp value should be smaller.
 ---
 
 ## Dependencies
