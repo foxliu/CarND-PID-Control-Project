@@ -65,7 +65,7 @@ int main()
 //          std::cout << "the speed: " << speed << "\t the angle: " << angle << std::endl;
           pid_v.UpdateError(cte);
           throttle_value = 0.5 * (1 - fabs(pid_v.TotalError()));
-          
+
           // DEBUG
 //          std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
 

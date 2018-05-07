@@ -22,7 +22,7 @@ Two PID controllers were used, one to control the steering of the car and other 
   * The integral term accelerates the movement of the process towards setpoint and eliminates the residual steady-state     error that occurs with a pure proportional controller. However, since the integral term responds to accumulated         errors from the past, it can cause the present value to overshoot the setpoint value.
 * D -> Derivative
   * D is determined by the slope of error of time multiplied by the derivative coefficient.
-  * Derivative action predicts system behavior and thus improves settling time and stability of the system. 
+  * Derivative action predicts system behavior and thus improves settling time and stability of the system.
     Differential control can predict the future state of the vehicle and make advanced control.
 
 ### Find the PID Coefficient Values
@@ -48,7 +48,7 @@ Two PID controllers were used, one to control the steering of the car and other 
   * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
   * If you install from source, checkout to commit `e94b6e1`, i.e.
     ```
-    git clone https://github.com/uWebSockets/uWebSockets 
+    git clone https://github.com/uWebSockets/uWebSockets
     cd uWebSockets
     git checkout e94b6e1
     ```
@@ -62,7 +62,7 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+4. Run it: `./pid`.
 
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
 
